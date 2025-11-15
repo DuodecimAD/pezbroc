@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+:root {
+    --bg: #e9ecef;
+    --fill: white;
+    --accent: #f8b762;
+    --secondary: lightslategrey;
+    --debug: mediumslateblue;
+    --error: #ff5c5c;
+    --bad: #fdb4b4;
+    --good: #c4f7c1;
+
+    --my-border: solid .1333rem var(--secondary);
+}
+
+body {
+    margin: 0 auto;
+}
+
+html, body, button, input, textarea, select {
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    font-size: .95em;
+}
+
+.max-width {
+    max-width: 66.7rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: .666rem;
+}
+
+textarea {
+    resize: none;
+}
+
+input, textarea, select {
+    padding: .33em;
+}
+
+.boite {
+    background-color: var(--bg);
+    border: var(--my-border);
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1.333rem;
+}
+
+#loginButton {
+    all: revert;
+    position: absolute;
+    top: 1.333rem;
+    right: 1.333rem;
+}
+
+#loggedin {
+    position: absolute;
+    top: .666rem;
+    right: 1.333rem;
+    height: 3.335rem;
+    display: flex;
+    align-items: center;
+    gap: .666rem;
+}
+
+#loggedin a, .revert, .revert:hover {
+    all: revert;
+}
+
+#loginButton:hover, #loggedin a:hover, a, button, #mdpForgot:hover, .revert:hover {
+    text-decoration: none;
+}
+
+#loggedin img {
+    height: 3.335rem;
+}
+
+#userInfos {
+    display: flex;
+    flex-direction: row;
+    gap: .666rem;
+    align-items: center;
+}
+
+#headerPage {
+    text-align: center;
+}
+
+#headerPage img {
+    width: 16.68rem;
+    height: 16.68rem;
+}
+
+nav {
+    padding: .4em;
+    background-color: var(--bg);
+    align-content: center;
+    border-top: var(--my-border);
+    border-bottom: var(--my-border);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.333rem;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    display: block;
+}
+
+a, button {
+    text-align: center;
+    border-radius: .1333rem;
+    padding: .666rem;
+    margin: 0 auto;
+    color: #000;
+    box-shadow: .2rem .2rem 0 0 var(--secondary),
+    inset .1333rem .1333rem 0 0 var(--fill);
+    background-color: var(--accent);
+    border: none;
+}
+
+a:hover, button:hover {
+    box-shadow: inset .2rem .2rem 0 0 var(--secondary),
+    .1333rem .1333rem 0 0 var(--fill);
+    cursor: pointer;
+}
+
+nav a {
+    background-color: #fafafa;
+    min-width: 6.67rem;
+}
+
+nav ul li a.active {
+    background-color: var(--accent);
+}
+
+h1 {
+    margin: 1.333rem 0 2rem;
+}
+
+main {
+    text-align: center;
+    margin-bottom: 3.335rem;
+    min-height: 30em;
+}
+
+footer {
+    border-top: var(--my-border) ;
+    background-color: var(--bg);
+    align-content: center;
+    text-align: center;
+    margin-top: 3.335rem;
+}
+
+article {
+    border: var(--my-border) ;
+    box-sizing: border-box;
+}
+
+/**************/
+/* Login Page */
+/**************/
+
+#login_form {
+    max-width: 33.36rem;
+}
+
+#login_form div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    padding: 1.333rem;
+}
+
+#mdpForgot {
+    all: revert;
+    font-size: .9em;
+}
+
+#login_form input {
+    padding: .333rem;
+    margin: .333rem 0 1.333rem;
+}
+
+#login_form label {
+    text-align: left;
+}
+
+#login_form button {
+    width: 8rem;
+    padding: .666rem;
+    margin: .333rem auto 1rem;
+}
+
+#login_form #loginHelp {
+    all: revert;
+    margin: auto;
+    background-color: var(--bad);
+    border: solid .15rem var(--error) ;
+    width: 50%;
+    line-height: 2em;
+    padding:2em;
+}
+
+#loginHelp p{
+    word-wrap: break-word;
+}
+
+#loginHelp p b{
+    text-decoration:underline;
+}
+
+/*************/
+/* Home Page */
+/*************/
+
+#Home_img {
+    width: 100%;
+    height: 16rem;
+    overflow: hidden;
+}
+
+#Home_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#Home_who {
+    background-color: var(--bg);
+    border-top: var(--my-border);
+    border-bottom: var(--my-border);
+}
+
+#Home_ex {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .666rem 3.335rem;
+}
+
+#Home_ex h2 {
+    width: 100%;
+}
+
+#Home_ex article {
+    padding: 2.665rem;
+    width: 17em;
+}
+
+#Home_ex article a {
+    width: 5.33rem;
+    padding: .666rem;
+}
+
+/*******************************/
+/* Contact & Inscription Pages */
+/*******************************/
+
+#contact_form {
+    max-width: 45rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#inscription_form {
+    max-width: 45.36rem;
+    padding: 1.333rem 3.67rem 3.335rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: .7em;
+}
+
+#contact_form label, #inscription_form label {
+    margin: .666rem 0 .333rem 6%;
+}
+
+#contact_form input, #contact_form textarea, #inscription_form input {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#contact_form button, #inscription_form button {
+    padding: .666rem 1rem;
+    margin: 2rem auto .666rem;
+}
+
+#inscription_form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: .5rem;
+    width: 100%;
+}
+
+#inscription_form div:nth-child(2) {
+    flex-basis: 48%;
+}
+
+#inscription_form #previewAvatar {
+    margin: auto;
+    height: 10em;
+}
+
+#inscription_form #avatar {
+    width: 14em;
+}
+
+#inscription_form div:nth-child(2) a {
+    all: unset;
+    text-decoration: underline;
+    display: block;
+    margin: 0 auto;
+}
+
+#inscription_form div:nth-child(2) a:nth-child(2):hover {
+    all: unset;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#inscription_form div:nth-child(2) img:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 43em) {
+    #inscription_form div:nth-child(1) {
+        flex-basis: 50%;
+    }
+
+    #inscription_form div:nth-child(3) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+#inscription_form div:nth-child(4) {
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#inscription_form div:nth-child(4) label {
+    width: 100%;
+    text-align: left;
+}
+
+#inscription_form textarea {
+    padding: .333rem;
+    resize: none;
+    width: 93%;
+}
+
+#inscription_form div:nth-child(5) {
+    flex-basis: 85%;
+    flex-direction: row-reverse;
+    order: 5;
+    align-items: center;
+}
+
+#inscription_form div:nth-child(5) input {
+    flex-basis: 10%;
+}
+
+#inscription_form div:nth-child(5) label {
+    text-align: left;
+    margin: 0;
+    padding: .333rem;
+}
+
+#inscription_form div:nth-child(6) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    order: 6;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#inscription_form div:nth-child(6) a,
+#inscription_form div:nth-child(6) button {
+    margin: 0;
+}
+
+.annuler, #dejaCompte {
+    all: revert;
+    text-decoration: underline;
+    display: block;
+    margin: 0 auto;
+}
+
+.annuler:hover, #dejaCompte:hover {
+    all: unset;
+    cursor: pointer;
+}
+
+/*****************************/
+/* Réinitialisation mdp Page */
+/*****************************/
+
+#reinitialisationmdp_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 33.36rem;
+    gap: 1.333rem;
+}
+
+#reinitialisationmdp_form section:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .333rem;
+}
+
+#reinitialisationmdp_form input {
+    width: 16.68rem;
+}
+
+#reinitialisationmdp_form section:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#reinitialisationmdp_form section:nth-child(2) button {
+    padding: .666rem;
+}
+
+#reinitialisationmdp_form div:nth-child(1), reinitialisationmdp_form div:nth-child(2) {
+    display:flex;
+    flex-direction:column;
+    gap:.5em;
+}
+#reinitialisationmdp_form div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+/********************/
+/* Brocanteurs Page */
+/********************/
+
+#Brocanteurs_search {
+    display: flex;
+    gap: .666rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Brocanteurs_search button, #Brocanteurs_search a {
+    padding: .666rem;
+    margin: 0;
+}
+
+#Brocanteurs_search div, #Objets_search div:nth-of-type(2) {
+    display: flex;
+    gap: .8em;
+}
+
+#Brocanteurs input, #Brocanteurs select, #Objets_search input, #Objets_search select {
+    padding: .6rem;
+}
+
+#Brocanteurs_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6em;
+    margin-top: 1.333rem;
+}
+
+#Brocanteurs_list h2, #Objets_list h2, #dejaCompte, #dejaCompte:hover {
+    flex: 1 1 100%;
+}
+
+#Brocanteurs_list h3 {
+    margin: .666rem;
+}
+
+#Brocanteurs_list article {
+    width: 49.5%;
+    background-color: var(--fill);
+    display: flex;
+    padding: .333rem;
+}
+
+#Brocanteurs_list article div, #Brocanteurs_list img {
+    height: 6.67rem;
+}
+
+#Brocanteurs_list article div:nth-child(1) {
+    width: 8em;
+}
+
+#Brocanteurs_list article div:nth-child(2) p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+#Brocanteurs_list article div:nth-child(3) {
+    align-content: center;
+}
+
+@media (max-width: 56em) {
+    #Brocanteurs_list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Brocanteurs_list article {
+        width: 80%;
+
+    }
+}
+
+@media (max-width: 37em) {
+    #Brocanteurs_list article {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+}
+
+/***************/
+/* Objets Page */
+/***************/
+
+#Objets_search {
+    display: flex;
+    gap: .666rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#Objets_search button, #Objets_search a {
+    padding: .733rem;
+    margin: 0;
+}
+
+#Objets_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 2em;
+}
+
+#Objets_list article {
+    padding: .666rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fill);
+}
+
+#Objets_list article h3, #BrocanteurProfil p, #ObjetProfil p {
+    margin: .333rem 0;
+}
+
+/****************************/
+/* Brocanteur & Objet Pages */
+/****************************/
+
+#Brocanteur, #Objet {
+    margin-top: 3.335rem;
+    padding: 0;
+}
+
+#Brocanteur h2, #Objet h2 {
+    margin: 2rem 0;
+}
+
+#BrocanteurProfil, #ObjetProfil {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.333rem;
+}
+
+#BrocanteurProfil h1, #ObjetProfil h1 {
+    margin: 0 0 1rem;
+}
+
+#BrocanteurProfil div, #ObjetProfil div {
+    border: solid .1333rem var(--secondary);
+}
+
+#BrocanteurProfil div:nth-child(1), #ObjetProfil div:nth-child(1), #BrocanteurProfil img, #ObjetProfil img {
+    height: 13.34rem;
+}
+
+#BrocanteurProfil div:nth-child(2), #ObjetProfil div:nth-child(2) {
+    display: flex;
+    align-items: flex-start;
+    flex-basis: 60%;
+    padding: 1.333rem;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--fill);
+}
+
+#Brocanteur #Objets_list article {
+    width: 12em;
+    height: 18em;
+}
+
+#Brocanteur #Objets_list img, #Objets #Objets_list img, #Home_ex img {
+    width: 10.5em;
+    height: 10.5em;
+    object-fit: contain;
+}
+
+#Objet form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 35em;
+    gap: .5em;
+}
+
+#Objet form input, #Objet form textarea, #Objet form select {
+    width: 18em;
+}
+
+/*************************/
+/* espaceBrocanteur Page */
+/*************************/
+
+#espaceBroc {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1em;
+    column-gap: .4em;
+}
+
+#espaceBroc h1, #espaceBroc h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#brocanteurDonnees {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#brocanteurDonnees ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+#espaceBroc img {
+    height: 9em;
+    width: 9em;
+    object-fit: contain;
+}
+
+#espaceBroc #Objets_list img {
+    width: 9em;
+    object-fit: contain;
+}
+
+#brocanteurDonnees p {
+    margin: 0 0 2em;
+    text-align: justify;
+}
+
+#brocanteurDonnees a:nth-of-type(2) {
+    box-shadow: unset;
+    color: revert;
+    background-color: unset;
+    text-decoration: underline;
+}
+
+.invisibleMagicBox {
+    width: 100% !important;
+    height: .3em;
+    visibility: hidden;
+}
+
+.sectionLeft {
+    width: 70%;
+}
+
+.sectionRight {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+#espaceBroc form {
+    gap: .5em;
+}
+
+#espaceBroc form h2, #inscription_form div div, #Objets_list h2:first-child, #espaceBroc #Objets_list  {
+    margin-top: 0;
+}
+
+#espaceBroc form img {
+    margin: auto;
+}
+
+#espaceBroc form label, #Objet form label, #Objet form button {
+    margin-top: 1em;
+}
+
+#espaceBroc #Objets_list {
+    padding: 1.4em 1em;
+}
+
+#espaceBroc #Objets_list article {
+    padding: 1.2em .8em;
+}
+
+/********************/
+/* espaceAdmin Page */
+/********************/
+
+.espaceAdmin_list {
+    display: flex;
+    flex-direction: column;
+    gap: .666rem;
+    margin-top: 1.333rem;
+    align-items: center;
+}
+
+.espaceAdmin_list article {
+    width: 85%;
+    display: flex;
+    gap: .666rem;
+    padding: .666rem;
+    justify-content: center;
+    background-color: var(--fill);
+}
+
+.espaceAdmin_list article div, .espaceAdmin_list article img {
+    height: 9em;
+}
+
+.espaceAdmin_list article div:nth-child(2), #Brocanteurs_list article div:nth-child(2) {
+    width: 60%;
+}
+
+.espaceAdmin_list article div:nth-child(1) {
+    width: 17em;
+}
+
+.espaceAdmin_list article div:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.espaceAdmin_list article form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .333rem;
+}
+
+#espaceAdmin_menu {
+    display: flex;
+    flex-direction: row;
+    gap: .666rem;
+    margin-top: 1.333rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#espaceAdmin_menu a {
+    width: 13.334rem;
+    margin: 0;
+}
+
+@media (max-width: 53em) {
+    .espaceAdmin_list article {
+        flex-wrap: wrap;
+
+    }
+}
+
+@media (max-width: 47em) {
+    #espaceBroc {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    #espaceBroc section, #espaceBroc form {
+        width: 80%;
+    }
+
+    #espaceBroc #Objets_list {
+        order: 4;
+    }
+}
+
+.submit_delete {
+    background-color: var(--error);
+}
+
+.errorMessage {
+    display: block;
+    margin: .5em auto 2em;
+    width: fit-content;
+    padding: .62rem;
+    background-color: var(--bad);
+}
+
+.delete_icon {
+    all: unset;
+    margin-top: 1em;
+    /*background-color: var(--error);*/
+    padding: .2em;
+    height: 2em;
+    border-radius: .2em;
+
+}
+
+.delete_icon:hover {
+    box-shadow: none;
+    transform: rotate(45deg);
+    transition: transform .3s;
+    will-change: transform;
+}
+
+.delete_icon img {
+    width: 2em !important;
+    height: 2em !important;
+
+}
+
+.warning {
+    border: solid .1333rem var(--secondary);
+    text-align: center;
+    line-height: 1.7em;
+    align-self: center;
+    padding: 1.3em;
+}
+
+.bad_warning {
+    background-color: var(--bad);
+}
+
+.good_warning {
+    background-color: var(--good);
+    /*width: 9em;*/
+}
+
+.success, .delete_confirmation {
+    width: 60%;
+    margin: auto;
+}
+
+.peaceOut {
+    display:none;
+}
